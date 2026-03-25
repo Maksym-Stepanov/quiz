@@ -1,13 +1,3 @@
 <?php
-$host = 'localhost';
-$user = 'root';
-$pass = ''; 
-$db   = 'quiz'; // Zmieniono z quiz_db na quiz
-
-$mysqli = new mysqli($host, $user, $pass, $db);
-
-if ($mysqli->connect_error) {
-    die("Błąd połączenia: " . $mysqli->connect_error);
-}
-$mysqli->set_charset("utf8mb4");
-?>
+$mysqli = new mysqli("localhost", "root", "", "quiz"); // проверь название 'quiz'
+if ($mysqli->connect_error) { die("Ошибка: " . $mysqli->connect_error); }

@@ -1,38 +1,27 @@
 <?php
 require_once 'db.php';
-$query = "SELECT username, score, created_at FROM results ORDER BY created_at DESC";
-$res = $mysqli->query($query);
+$res = $mysqli->query("SELECT username, score, created_at FROM results ORDER BY score DESC, created_at DESC LIMIT 10");
 ?>
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <title>Ranking</title>
+    <title>Топ игроков</title>
 </head>
 <body>
     <div class="container">
-        <h1>Tabela Wyników</h1>
+        <h1>Топ 10 игроков</h1>
         <table>
-            <thead>
-                <tr>
-                    <th>Gracz</th>
-                    <th>Wynik</th>
-                    <th>Data</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php while($row = $res->fetch_assoc()): ?>
-                <tr>
-                    <td><?php echo htmlspecialchars($row['username']); ?></td>
-                    <td><?php echo $row['score']; ?>/10 (<?php echo $row['score']*10; ?>%)</td>
-                    <td><?php echo $row['created_at']; ?></td>
-                </tr>
-                <?php endwhile; ?>
-            </tbody>
+            <tr><th>Игрок</th><th>Баллы</th></tr>
+            <?php while($row = $res->fetch_assoc()): ?>
+            <tr>
+                <td><?= htmlspecialchars($row['username']) ?></td>
+                <td><?= $row['score'] ?></td>
+            </tr>
+            <?php endwhile; ?>
         </table>
-        <br>
-        <a href="index.php" class="btn">Zagraj ponownie</a>
+        <a href="index.php" class="btn">Играть снова</a>
     </div>
 </body>
 </html>

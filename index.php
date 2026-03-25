@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Mega Quiz 2026</title>
     <link rel="stylesheet" href="style.css">
+    <title>Вход в Квиз</title>
 </head>
 <body>
     <div class="container">
-        <h1>Quiz</h1>
+        <h1>Квиз: Столицы</h1>
         <form action="quiz.php" method="POST">
-            <label for="username">Podaj swoją nickname (opcjonalnie):</label>
-            <input type="text" name="username" id="username" placeholder="Twoja ksywka...">
-            <button type="submit" class="btn">Start</button>
+            <p>Введите ваше имя:</p>
+            <input type="text" name="username" placeholder="Имя (или оставь пустым)...">
+            <button type="submit" class="btn">Начать игру</button>
         </form>
     </div>
 </body>
