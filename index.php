@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <title>Вход в Квиз</title>
+    <title>Quizapp</title>
 </head>
 <body>
     <div class="container">
-        <h1>Квиз: Столицы</h1>
+        <h1><i>Quiz</i></h1>
         <form action="quiz.php" method="POST">
-            <p>Введите ваше имя:</p>
-            <input type="text" name="username" placeholder="Имя (или оставь пустым)...">
-            <button type="submit" class="btn">Начать игру</button>
+            <p>Wpisz swoje imie</p>
+            <input type="text" name="username" placeholder="Twoje Imie">
+            <button type="submit" class="btn">Start</button>
         </form>
     </div>
 </body>

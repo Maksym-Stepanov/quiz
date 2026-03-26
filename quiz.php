@@ -27,21 +27,21 @@ while ($row = $result->fetch_assoc()) {
 ?>
 
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Квиз по столицам</title>
+    <title>Quiz stolicy</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
     <div style="text-align: right; color: #5f6368; font-size: 0.9em; margin-bottom: 10px;">
-        Игрок: <strong><?php echo $username; ?></strong>
+        Nickname: <strong><?php echo $username; ?></strong>
     </div>
     
-    <h1>Викторина: Столицы Европы</h1>
+    <h1>Stolicy Europy</h1>
 
     <form action="summary.php" method="POST">
         <input type="hidden" name="username" value="<?php echo $username; ?>">
@@ -64,7 +64,7 @@ while ($row = $result->fetch_assoc()) {
             </div>
         <?php endforeach; ?>
 
-        <button type="submit" class="btn">Завершить и узнать результат</button>
+        <button type="submit" class="btn"><i>Koniec</i></button>
     </form>
 </div>
 
