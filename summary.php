@@ -19,18 +19,18 @@ $stmt->bind_param("si", $username, $score);
 $stmt->execute();
 ?>
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <title>Результат</title>
+    <title>Wynik</title>
 </head>
 <body>
     <div class="container">
-        <h1>Ваш результат</h1>
-        <p>Игрок: <strong><?= htmlspecialchars($username) ?></strong></p>
+        <h1>Twój wynik</h1>
+        <p>Gracz: <strong><?= htmlspecialchars($username) ?></strong></p>
         <div style="font-size: 48px; color: #1a73e8; margin: 20px 0;"><?= $score ?> / 10</div>
-        <a href="results.php" class="btn">Таблица лидеров</a>
+        <a href="results.php" class="btn">Tabela liderów</a>
     </div>
 </body>
 </html>

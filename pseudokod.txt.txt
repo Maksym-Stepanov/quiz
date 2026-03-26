@@ -1,0 +1,28 @@
+POCZĄTEK PROJEKTU "QUIZ"
+
+1.  WEJŚCIE (index.php):
+    POBIERZ imię OD użytkownika
+    JEŻELI imię JEST puste TO GENERUJ losowy ciąg (np. User_a1b2)
+    PRZEKAŻ imię DO quiz.php
+
+2.  PROCES QUIZU (quiz.php):
+    POŁĄCZ SIĘ z bazą danych
+    POBIERZ listę pytań I odpowiedzi
+    DLA KAŻDEGO pytania:
+        WYŚWIETL treść pytania (pionowo)
+        WYŚWIETL 4 opcje odpowiedzi (radio buttons)
+    KONIEC DLA
+    CZEKAJ na kliknięcie "Zakończ"
+
+3.  OBLICZENIA (summary.php):
+    POBIERZ odpowiedzi użytkownika
+    POBIERZ poprawne klucze Z bazy danych
+    PORÓWNAJ odpowiedzi I ZLICZ punkty (score)
+    ZAPISZ (imię + wynik) DO tabeli 'results'
+
+4.  FINAŁ (results.php):
+    POBIERZ TOP 10 wyników Z bazy danych
+    WYŚWIETL tabelę liderów (Ranking)
+    DAJ opcję "Graj ponownie" -> WRÓĆ DO index.php
+
+KONIEC PROJEKTU
