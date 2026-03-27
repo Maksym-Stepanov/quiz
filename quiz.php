@@ -60,7 +60,7 @@ while ($row = $result->fetch_assoc()) {
             </div>
         <?php endforeach; ?>
 
-        <button type="submit" class="btn"><iKoniec</i></button>
+        <button type="submit" class="btn"><i>Koniec</i></button>
     </form>
 </div>
 
