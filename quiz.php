@@ -1,17 +1,13 @@
 <?php
 require_once 'db.php';
 
-// 1. Логика генерации случайного имени (буквы + цифры)
 if (isset($_POST['username']) && trim($_POST['username']) !== '') {
-    // Если пользователь ввел имя, очищаем его от лишних пробелов
     $username = htmlspecialchars(trim($_POST['username']));
 } else {
-    // Если имя не введено, генерируем случайную строку (например: User_a1b2c3d4)
-    $random_hash = bin2hex(random_bytes(4)); // Генерирует 8 случайных символов
+    $random_hash = bin2hex(random_bytes(4)); 
     $username = 'x' . $random_hash;
 }
 
-// 2. Получаем вопросы и ответы из базы данных
 $query = "SELECT q.id as q_id, q.question_text, a.id as a_id, a.answer_text, a.label 
           FROM questions q 
           JOIN answers a ON q.id = a.question_id 
@@ -64,7 +60,7 @@ while ($row = $result->fetch_assoc()) {
             </div>
         <?php endforeach; ?>
 
-        <button type="submit" class="btn"><i>Koniec</i></button>
+        <button type="submit" class="btn"><iKoniec</i></button>
     </form>
 </div>
 
